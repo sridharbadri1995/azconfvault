@@ -10,3 +10,8 @@ dotnet user-secrets set ConnectionStrings:AppConfig "Endpoint=https://ac-azconfv
 
 
 dotnet user-secrets list
+
+Key Vault Creation
+https://docs.microsoft.com/en-us/azure/azure-app-configuration/use-key-vault-references-dotnet-core?tabs=core5x
+
+dotnet add package Azure.Identity
