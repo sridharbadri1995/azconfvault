@@ -1,0 +1,30 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "type": "string",
+            "defaultValue":"Central US",
+            "metadata": {
+                "description": "resource group location"
+            }
+        },
+        "rgName": {
+            "type": "string",
+            "defaultValue": "rg-azconfvault",
+            "metadata": {
+                "description": "resourcegroup name"
+            }
+        }
+    },
+    "resources": [
+        {
+            "name": "[parameters('rgName')]",
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2018-05-01",
+            "location": "[parameters('location')]",
+            "dependsOn": [],
+            "tags": {}
+        }
+    ]
+}

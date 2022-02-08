@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "6f20362c-99f3-4dc7-839a-ab9a23a84188"
+        },
+        "name": {
+            "value": "azconfvault"
+        },
+        "location": {
+            "value": "Central US"
+        },
+        "hostingPlanName": {
+            "value": "ASP-azconfvault-basic"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+        "sku": {
+            "value": "Basic"
+        },
+        "skuCode": {
+            "value": "B1"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "workerSizeId": {
+            "value": "0"
+        },
+        "numberOfWorkers": {
+            "value": "1"
+        },
+        "linuxFxVersion": {
+            "value": "DOTNETCORE|6.0"
+        },
+        "rgName": {
+            "value": "rg-azconfvault"
+        }
+    }
+}
