@@ -41,6 +41,13 @@
             "metadata": {
                 "description": "resourcegroup name"
             }
+        },
+        "acSKU": {
+            "type": "string",
+            "defaultValue": "Free",
+            "metadata": {
+                "description": "app config sku default free"
+            }
         }
     },
     "resources": [
@@ -52,6 +59,15 @@
         //     "dependsOn": [],
         //     "tags": {}
         // },
+        {
+            "type": "Microsoft.AppConfiguration/configurationStores",
+            "apiVersion": "2021-03-01-preview",
+            "name": "[concat('ac-', parameters('name'))]",
+            "location": "[parameters('location')]",           
+            "sku": {
+                "name": "[parameters('acSKU')]"
+            }
+        },
         {
             "apiVersion": "2019-08-01",
             "name": "[parameters('hostingPlanName')]",
@@ -74,7 +90,7 @@
                 "Tier": "[parameters('sku')]",
                 "Name": "[parameters('skuCode')]"
             }
-        },        
+        },
         {
             "apiVersion": "2018-11-01",
             "name": "[parameters('name')]",

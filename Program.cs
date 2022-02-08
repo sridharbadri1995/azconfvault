@@ -1,5 +1,18 @@
 var builder = WebApplication.CreateBuilder(args);
 
+
+var connectionString = builder.Configuration.GetConnectionString("AppConfig");
+
+builder.Host.ConfigureAppConfiguration(builder =>
+                {
+                    //Connect to your App Config Store using the connection string
+                    builder.AddAzureAppConfiguration(connectionString);
+                })
+            .ConfigureServices(services =>
+                {
+                    services.AddControllersWithViews();
+                });
+
 // Add services to the container.
 builder.Services.AddRazorPages();
 

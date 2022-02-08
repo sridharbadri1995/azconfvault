@@ -37,6 +37,9 @@
         },
         "rgName": {
             "value": "rg-azconfvault"
+        },
+        "acSKU": {
+            "value": "Free"
         }
     }
 }
