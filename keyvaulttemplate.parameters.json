@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "value": "kv-azconfvault"
+            "value": "kv-azconfvault_new"
         },
         "location": {
             "value": "centralus"
