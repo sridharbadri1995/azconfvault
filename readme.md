@@ -12,6 +12,21 @@ dotnet user-secrets set ConnectionStrings:AppConfig "Endpoint=https://ac-azconfv
 Endpoint=https://ac-azconfvault.azconfig.io;Id=B+Tp-l4-s0:J7zhHFWTq2386uoHgGNs;Secret=gSy+y1DVolQ+t6+Vogjgsp9ib22tpnWkLTrQkH0bSAs=
 
 
+ System.Console.WriteLine(connectionString);
+
+              
+                    //Connect to your App Config Store using the connection string
+                    // builder.AddAzureAppConfiguration(connectionString);
+                    builder.AddAzureAppConfiguration(option => 
+                    {
+                        option.Connect(connectionString);
+                        option.ConfigureKeyVault(kv =>
+                        {
+                            kv.SetCredential(new DefaultAzureCredential());
+                        });
+                    });
+
+
 Endpoint=https://ac-azconfvault.azconfig.io;Id=+/1c-l4-s0:O4U0MklPmOcUir8qoRy+;Secret=4S/AeQiMe7NJX6x7XpQAETiuHGkRkugKcFsrixwhjwY=
 
 dotnet user-secrets list
