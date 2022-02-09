@@ -14,7 +14,7 @@
         "accessPolicies": {
             "value": [
                 {
-                    "objectId": "4df9e21c-66d2-4f4f-a73b-202a90a6b18e",
+                    "objectId": "e0cf82b4-2747-4fab-8d31-7eb225888d5f",
                     "tenantId": "01b695ba-6326-4daf-a9fc-629432404139",
                     "permissions": {
                         "keys": [
