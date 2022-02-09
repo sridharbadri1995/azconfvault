@@ -11,18 +11,19 @@ var connectionString = builder.Configuration.GetConnectionString("AppConfig");
 builder.Host.ConfigureAppConfiguration(builder =>
                 {
                    System.Console.WriteLine(connectionString);
-                    // builder.AddAzureAppConfiguration(connectionString);
+                   System.Console.WriteLine("Only app config");
+                    builder.AddAzureAppConfiguration(connectionString);
               
                     //Connect to your App Config Store using the connection string
                     // builder.AddAzureAppConfiguration(connectionString);
-                    builder.AddAzureAppConfiguration(option => 
-                    {
-                        option.Connect(connectionString);
-                        option.ConfigureKeyVault(kv =>
-                        {
-                            kv.SetCredential(new DefaultAzureCredential());
-                        });
-                    });                    
+                    // builder.AddAzureAppConfiguration(option => 
+                    // {
+                    //     option.Connect(connectionString);
+                    //     option.ConfigureKeyVault(kv =>
+                    //     {
+                    //         kv.SetCredential(new DefaultAzureCredential());
+                    //     });
+                    // });                    
 
                 })                
             .ConfigureServices(services =>
