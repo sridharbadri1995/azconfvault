@@ -15,3 +15,9 @@ Key Vault Creation
 https://docs.microsoft.com/en-us/azure/azure-app-configuration/use-key-vault-references-dotnet-core?tabs=core5x
 
 dotnet add package Azure.Identity
+
+
+d3lojzu6v2hiabbjvijgwety54wswhzqhhjiq5f2w5xg5zzffopq
+
+lniklgey2gjtx2rbzxf7tlpbf6oz5fbn7rebrisjd63eplc7q2jq
+
