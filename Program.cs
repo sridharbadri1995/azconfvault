@@ -19,10 +19,10 @@ builder.Host.ConfigureAppConfiguration(builder =>
                     builder.AddAzureAppConfiguration(option => 
                     {
                         option.Connect(new Uri(connectionString), new ManagedIdentityCredential());
-                        // option.ConfigureKeyVault(kv =>
-                        // {
-                        //     kv.SetCredential(new ManagedIdentityCredential());
-                        // });
+                        option.ConfigureKeyVault(kv =>
+                        {
+                            kv.SetCredential(new ManagedIdentityCredential());
+                        });
                     });
                      
 
