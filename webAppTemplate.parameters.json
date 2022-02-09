@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "subscriptionId": {
-            "value": "6f20362c-99f3-4dc7-839a-ab9a23a84188"
+            "value": "4c05ed37-fb6a-4e1d-be06-9d6779fab2ce"
         },
         "name": {
             "value": "azconfvault"
